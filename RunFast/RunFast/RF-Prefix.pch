@@ -1,0 +1,18 @@
+//
+//  RF-Prefix.pch
+//  RunFast
+//
+//  Created by 方琼蔚 on 17/4/22.
+//  Copyright © 2017年 方琼蔚. All rights reserved.
+//
+
+#ifndef RF_Prefix_pch
+#define RF_Prefix_pch
+
+#import "UIImage+ImageWithColor.h"
+#import "UIView+Circle.h"
+
+#import "Constant.h"
+#import <AFNetworking/AFNetworking.h>
+
+#endif /* RF_Prefix_pch */
