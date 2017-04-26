@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "MainTabBarViewController.h"
+#import "LoginViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -17,17 +18,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    MainTabBarViewController *tabBarVc = [[MainTabBarViewController alloc] init];
+    
+
+    LoginViewController *vc =[[LoginViewController alloc]init];
+
     self.window=[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor=[UIColor whiteColor];
-    self.window.rootViewController = tabBarVc;
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     [self.window makeKeyAndVisible];
 
     /* -------- 全局UI设置 -------- */
     //文本框通用设置
     [[UITextField appearance] setTintColor:TintColor];
     //导航栏通用设置
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:NAV_BGCOLOR] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageWithColor:CBLUE] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc]init] ];
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:18],NSFontAttributeName,nil]];

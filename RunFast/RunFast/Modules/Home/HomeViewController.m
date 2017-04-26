@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "MapViewController.h"
 
 @interface HomeViewController ()
 
@@ -14,29 +15,22 @@
 
 @implementation HomeViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    UIView *myview =[[UIView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
-//    myview.backgroundColor=[UIColor redColor];
-//    myview=[myview setLayerAndBezierPathCutCircularByRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(10, 10)];
-//    [self.view addSubview:myview];
+    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    btn.backgroundColor=CBLUE;
+    [btn addTarget:self action:@selector(toMapView) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
 
-
+-(void)toMapView{
+    MapViewController *vc=[[MapViewController alloc]init];
+    vc.hidesBottomBarWhenPushed=YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

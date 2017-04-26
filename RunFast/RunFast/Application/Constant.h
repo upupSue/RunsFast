@@ -12,20 +12,19 @@
 //color
 #define Rgb2UIColor(r, g, b, a)        [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:((a)/1.0)]
 
-#define THEME_BGCOLOR Rgb2UIColor(21 , 181, 233, 1) //主背景色
-#define NAV_BGCOLOR Rgb2UIColor(37 , 65, 67, 1) //辅背景色
-#define THIRD_BGCOLOR Rgb2UIColor(241 , 252, 252, 1) //底色
-#define FOURTH_BGCOLOR Rgb2UIColor(247 , 85, 85, 1) //红色
+#define NAV_BGCOLOR Rgb2UIColor(35 , 214, 263, 1) //主色
+#define CBLUE Rgb2UIColor(96 , 158, 235, 1) //主色
+#define SBLUE Rgb2UIColor(72 , 119, 176, 1) //主色
 
-#define FIRST_FONTCOLOR Rgb2UIColor(39 , 208, 216, 1) //主要字体色
-#define SECOND_FONTCOLOR Rgb2UIColor(8 , 100, 105, 1) //笔记字体色
-#define TintColor Rgb2UIColor(41 , 128, 132, 1) //TintColor
-#define FOURTH_FONTCOLOR Rgb2UIColor(137 , 207, 209, 1) //白绿
+#define BSEA Rgb2UIColor(62 , 62, 62, 1) //主色
+#define MGREEN Rgb2UIColor(57 , 155, 202, 1) //主色
+#define CEBLUE Rgb2UIColor(100 , 221, 176, 1) //主色
+
+#define BG_COLOR Rgb2UIColor(240 , 242, 243, 1) //背景色
+#define FONTCOLOR Rgb2UIColor(154 , 169, 177, 1) //主要字体色
+#define TintColor Rgb2UIColor(60 , 60, 60, 1) //TintColor
 
 #define LINE_COLOR Rgb2UIColor(225 , 225, 225, 1) //线条色
-#define GRAY_COLOR Rgb2UIColor(149 , 149, 149, 1) //灰色
-#define BGGRAY_COLOR Rgb2UIColor(248 , 248, 248, 1) //背景灰
-#define Btn_COLOR Rgb2UIColor(24 , 133, 254, 1) //按钮蓝
 
 //size
 #define SCREEN_HEIGHT ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)

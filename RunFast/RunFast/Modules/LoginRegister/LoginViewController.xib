@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
+            <connections>
+                <outlet property="loginView" destination="BQ9-3b-hqy" id="Ix7-Q3-3Lb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQ9-3b-hqy">
+                    <rect key="frame" x="40" y="273.5" width="295" height="120"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BT6-ZV-Vq1">
+                            <rect key="frame" x="0.0" y="59.5" width="295" height="1"/>
+                            <color key="backgroundColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="5aT-Uh-gXQ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="BT6-ZV-Vq1" firstAttribute="leading" secondItem="BQ9-3b-hqy" secondAttribute="leading" id="Yvl-sE-2eU"/>
+                        <constraint firstAttribute="height" constant="120" id="ec6-y5-tM4"/>
+                        <constraint firstAttribute="trailing" secondItem="BT6-ZV-Vq1" secondAttribute="trailing" id="g7U-nh-f4b"/>
+                        <constraint firstItem="BT6-ZV-Vq1" firstAttribute="centerY" secondItem="BQ9-3b-hqy" secondAttribute="centerY" id="mhB-fq-gRs"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BQ9-3b-hqy" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0jr-fr-J3K"/>
+                <constraint firstItem="BQ9-3b-hqy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="HKf-2a-F7e"/>
+                <constraint firstAttribute="trailing" secondItem="BQ9-3b-hqy" secondAttribute="trailing" constant="40" id="uzD-kl-P2d"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

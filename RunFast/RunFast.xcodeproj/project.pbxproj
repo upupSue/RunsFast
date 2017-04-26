@@ -23,6 +23,13 @@
 		C5C2811B1EAB8BB9006B77E7 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C281161EAB8BB9006B77E7 /* HomeViewController.xib */; };
 		C5C2811C1EAB8BB9006B77E7 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281191EAB8BB9006B77E7 /* MainTabBarViewController.m */; };
 		C5C2811F1EAB9303006B77E7 /* UserDefaultsUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2811E1EAB9303006B77E7 /* UserDefaultsUtils.m */; };
+		C5C281241EAFAA91006B77E7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281221EAFAA91006B77E7 /* LoginViewController.m */; };
+		C5C281251EAFAA91006B77E7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C281231EAFAA91006B77E7 /* LoginViewController.xib */; };
+		C5C2812C1EAFB46C006B77E7 /* DeformationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281281EAFB46C006B77E7 /* DeformationButton.m */; };
+		C5C2812D1EAFB46C006B77E7 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2812B1EAFB46C006B77E7 /* MMMaterialDesignSpinner.m */; };
+		C5C2813C1EB0E6C9006B77E7 /* AMapNavi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5C2813B1EB0E6C9006B77E7 /* AMapNavi.bundle */; };
+		C5C2813E1EB0E6D7006B77E7 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5C2813D1EB0E6D7006B77E7 /* AMap.bundle */; };
+		C5C281421EB106EA006B77E7 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281411EB106EA006B77E7 /* MapViewController.m */; };
 		EC6F63309C7EDB821857F612 /* Pods_RunFast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEED866A11A5463CCF630AE /* Pods_RunFast.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +87,20 @@
 		C5C281191EAB8BB9006B77E7 /* MainTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
 		C5C2811D1EAB9303006B77E7 /* UserDefaultsUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaultsUtils.h; sourceTree = "<group>"; };
 		C5C2811E1EAB9303006B77E7 /* UserDefaultsUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaultsUtils.m; sourceTree = "<group>"; };
+		C5C281211EAFAA91006B77E7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C5C281221EAFAA91006B77E7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C5C281231EAFAA91006B77E7 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C5C281271EAFB46C006B77E7 /* DeformationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeformationButton.h; sourceTree = "<group>"; };
+		C5C281281EAFB46C006B77E7 /* DeformationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeformationButton.m; sourceTree = "<group>"; };
+		C5C2812A1EAFB46C006B77E7 /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
+		C5C2812B1EAFB46C006B77E7 /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
+		C5C281331EB0CD88006B77E7 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapFoundationKit.framework; path = Pods/AMapFoundation/AMapFoundationKit.framework; sourceTree = "<group>"; };
+		C5C281351EB0D2DA006B77E7 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = Pods/AMap3DMap/MAMapKit.framework; sourceTree = "<group>"; };
+		C5C281371EB0D610006B77E7 /* AMapNaviKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapNaviKit.framework; path = Pods/AMapNavi/AMapNaviKit.framework; sourceTree = "<group>"; };
+		C5C2813B1EB0E6C9006B77E7 /* AMapNavi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMapNavi.bundle; path = Pods/AMapNavi/AMapNaviKit.framework/AMapNavi.bundle; sourceTree = "<group>"; };
+		C5C2813D1EB0E6D7006B77E7 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = Pods/AMap3DMap/MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
+		C5C281401EB106EA006B77E7 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		C5C281411EB106EA006B77E7 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		FE545343A055E146F773574A /* Pods-RunFast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunFast.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunFast/Pods-RunFast.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +142,9 @@
 		BF77FA57DD45A3239969E7ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C5C281371EB0D610006B77E7 /* AMapNaviKit.framework */,
+				C5C281351EB0D2DA006B77E7 /* MAMapKit.framework */,
+				C5C281331EB0CD88006B77E7 /* AMapFoundationKit.framework */,
 				4FEED866A11A5463CCF630AE /* Pods_RunFast.framework */,
 			);
 			name = Frameworks;
@@ -129,6 +153,8 @@
 		C5C2809A1EAB668B006B77E7 = {
 			isa = PBXGroup;
 			children = (
+				C5C2813D1EB0E6D7006B77E7 /* AMap.bundle */,
+				C5C2813B1EB0E6C9006B77E7 /* AMapNavi.bundle */,
 				C5C280A51EAB668B006B77E7 /* RunFast */,
 				C5C280BF1EAB668B006B77E7 /* RunFastTests */,
 				C5C280CA1EAB668B006B77E7 /* RunFastUITests */,
@@ -237,6 +263,7 @@
 		C5C280EE1EAB7628006B77E7 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				C5C281261EAFB46C006B77E7 /* DeformationButton */,
 			);
 			path = ThirdLib;
 			sourceTree = "<group>";
@@ -279,6 +306,8 @@
 		C5C281121EAB8BB9006B77E7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C5C2813F1EB106DD006B77E7 /* Map */,
+				C5C281201EAFAA78006B77E7 /* LoginRegister */,
 				C5C281131EAB8BB9006B77E7 /* Home */,
 				C5C281171EAB8BB9006B77E7 /* Main */,
 			);
@@ -302,6 +331,44 @@
 				C5C281191EAB8BB9006B77E7 /* MainTabBarViewController.m */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		C5C281201EAFAA78006B77E7 /* LoginRegister */ = {
+			isa = PBXGroup;
+			children = (
+				C5C281211EAFAA91006B77E7 /* LoginViewController.h */,
+				C5C281221EAFAA91006B77E7 /* LoginViewController.m */,
+				C5C281231EAFAA91006B77E7 /* LoginViewController.xib */,
+			);
+			path = LoginRegister;
+			sourceTree = "<group>";
+		};
+		C5C281261EAFB46C006B77E7 /* DeformationButton */ = {
+			isa = PBXGroup;
+			children = (
+				C5C281271EAFB46C006B77E7 /* DeformationButton.h */,
+				C5C281281EAFB46C006B77E7 /* DeformationButton.m */,
+				C5C281291EAFB46C006B77E7 /* MMMaterialDesignSpinner-master */,
+			);
+			path = DeformationButton;
+			sourceTree = "<group>";
+		};
+		C5C281291EAFB46C006B77E7 /* MMMaterialDesignSpinner-master */ = {
+			isa = PBXGroup;
+			children = (
+				C5C2812A1EAFB46C006B77E7 /* MMMaterialDesignSpinner.h */,
+				C5C2812B1EAFB46C006B77E7 /* MMMaterialDesignSpinner.m */,
+			);
+			path = "MMMaterialDesignSpinner-master";
+			sourceTree = "<group>";
+		};
+		C5C2813F1EB106DD006B77E7 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C5C281401EB106EA006B77E7 /* MapViewController.h */,
+				C5C281411EB106EA006B77E7 /* MapViewController.m */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +483,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C2813E1EB0E6D7006B77E7 /* AMap.bundle in Resources */,
+				C5C2813C1EB0E6C9006B77E7 /* AMapNavi.bundle in Resources */,
+				C5C281251EAFAA91006B77E7 /* LoginViewController.xib in Resources */,
 				C5C280B61EAB668B006B77E7 /* LaunchScreen.storyboard in Resources */,
 				C5C280B31EAB668B006B77E7 /* Assets.xcassets in Resources */,
 				C5C2811B1EAB8BB9006B77E7 /* HomeViewController.xib in Resources */,
@@ -499,7 +569,11 @@
 				C5C2810A1EAB88DE006B77E7 /* UIView+Circle.m in Sources */,
 				C5C2811A1EAB8BB9006B77E7 /* HomeViewController.m in Sources */,
 				C5C280F61EAB791F006B77E7 /* BaseViewController.m in Sources */,
+				C5C281241EAFAA91006B77E7 /* LoginViewController.m in Sources */,
 				C5C2811C1EAB8BB9006B77E7 /* MainTabBarViewController.m in Sources */,
+				C5C2812D1EAFB46C006B77E7 /* MMMaterialDesignSpinner.m in Sources */,
+				C5C2812C1EAFB46C006B77E7 /* DeformationButton.m in Sources */,
+				C5C281421EB106EA006B77E7 /* MapViewController.m in Sources */,
 				C5C280A81EAB668B006B77E7 /* main.m in Sources */,
 				C5C280E91EAB72D9006B77E7 /* HandlerBusiness.m in Sources */,
 			);
@@ -643,8 +717,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 68DLJX32QB;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/AMapFoundation",
+					"$(PROJECT_DIR)/Pods/AMap3DMap",
+					"$(PROJECT_DIR)/Pods/AMapNavi",
+				);
 				GCC_PREFIX_HEADER = "/Users/BigGIfts/Documents/ios开发学习/RunFast_IOS/RunFast/RunFast/RF-Prefix.pch";
 				INFOPLIST_FILE = RunFast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bigGIfts.RunFast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -658,8 +739,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 68DLJX32QB;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/AMapFoundation",
+					"$(PROJECT_DIR)/Pods/AMap3DMap",
+					"$(PROJECT_DIR)/Pods/AMapNavi",
+				);
 				GCC_PREFIX_HEADER = "/Users/BigGIfts/Documents/ios开发学习/RunFast_IOS/RunFast/RunFast/RF-Prefix.pch";
 				INFOPLIST_FILE = RunFast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bigGIfts.RunFast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
