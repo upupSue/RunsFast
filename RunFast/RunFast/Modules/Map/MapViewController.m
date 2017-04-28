@@ -9,42 +9,81 @@
 #import "MapViewController.h"
 #import <MAMapKit/MAMapKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapNaviKit/AMapNaviKit.h>
 
-@interface MapViewController ()<MAMapViewDelegate>{
+@interface MapViewController ()<MAMapViewDelegate,AMapNaviDriveManagerDelegate, AMapNaviDriveViewDelegate>{
     NSString *target;
     NSString *origin;
     NSString *city;
 }
 @property (nonatomic, strong) MAMapView *mapView;
 
+@property (nonatomic, strong) AMapNaviDriveManager *driveManager;
+@property (nonatomic, strong) AMapNaviDriveView *driveView;
+@property (nonatomic, strong) AMapNaviPoint *startPoint;
+@property (nonatomic, strong) AMapNaviPoint *endPoint;
 @end
 
 @implementation MapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    UIButton *returnBtn=[[UIButton alloc]initWithFrame:CGRectMake(10, 20, 44, 44)];
-//    [returnBtn setImage:[UIImage imageNamed:@"icon-arrow"] forState:UIControlEventTouchUpInside];
-//    [returnBtn addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:returnBtn];
     [self setMap];
     [self setlocationDot];
+//    [self setGps];
+
+    UIButton *returnBtn=[[UIButton alloc]initWithFrame:CGRectMake(10, 20, 44, 44)];
+    [returnBtn setImage:[UIImage imageNamed:@"icon-arrow"] forState:UIControlStateNormal];
+    [returnBtn addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:returnBtn];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden=YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     //    [self setPointAnnotation];
+    //路径规划
+//    [self.driveManager calculateDriveRouteWithStartPoints:@[self.startPoint]
+//                                                endPoints:@[self.endPoint]
+//                                                wayPoints:nil
+//                                          drivingStrategy:AMapNaviDrivingStrategySingleDefault];
 }
+
 -(void)goBack{
     [self.navigationController popViewControllerAnimated:YES];
 }
--(void)setMap{
+
+-(void)setGps{
+    //设置导航的起点和终点
+    self.startPoint = [AMapNaviPoint locationWithLatitude:39.98 longitude:116.47];
+    self.endPoint   = [AMapNaviPoint locationWithLatitude:39.99 longitude:116.45];
     
-    [AMapServices sharedServices].apiKey = @"12030938e5af9ed1e65c9da96728c6d7";
+    
+    //初始化AMapNaviDriveManager
+    if (self.driveManager == nil){
+        self.driveManager = [[AMapNaviDriveManager alloc] init];
+        [self.driveManager setDelegate:self];
+    }
+    
+    //初始化AMapNaviDriveView
+    if (self.driveView == nil){
+        self.driveView = [[AMapNaviDriveView alloc] initWithFrame:self.view.bounds];
+        [self.driveView setDelegate:self];
+    }
+    
+    //将AMapNaviManager与AMapNaviDriveView关联起来
+    [self.driveManager addDataRepresentative:self.driveView];
+    //将AManNaviDriveView显示出来
+    [self.view addSubview:self.driveView];
+}
+
+-(void)setMap{
+
     [AMapServices sharedServices].enableHTTPS = YES;//地图需要v4.5.0及以上版本才必须要打开此选项（v4.5.0以下版本，需要手动配置info.plist）
     
     _mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
@@ -58,7 +97,7 @@
     _mapView.compassOrigin= CGPointMake(_mapView.compassOrigin.x, 22);//设置指南针位置
     _mapView.showsScale= NO;//设置成NO表示不显示比例尺；YES表示显示比例尺
     _mapView.scaleOrigin= CGPointMake(_mapView.scaleOrigin.x, 22);//设置比例尺位置
-    [_mapView setZoomLevel:15 animated:YES];//缩放等级
+    [_mapView setZoomLevel:17 animated:YES];//缩放等级
     
     [self.view addSubview:_mapView];
     
@@ -130,12 +169,16 @@
     }];
 }
 
+- (void)driveManagerOnCalculateRouteSuccess:(AMapNaviDriveManager *)driveManager
+{
+    //算路成功后开始GPS导航
+    NSLog(@"onCalculateRouteSuccess");
+    [self.driveManager startGPSNavi];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
-
-
 
 
 @end

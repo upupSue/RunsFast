@@ -47,9 +47,8 @@
     _loginView.layer.cornerRadius=10;
     _loginView.layer.borderColor=LINE_COLOR.CGColor;
     _loginView.layer.borderWidth=1;
-    
-
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

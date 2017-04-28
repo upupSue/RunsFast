@@ -8,6 +8,9 @@
 
 #import "MainTabBarViewController.h"
 #import "HomeViewController.h"
+#import "OrderViewController.h"
+#import "MessageViewController.h"
+#import "PesonalViewController.h"
 @interface MainTabBarViewController ()
 
 @end
@@ -18,26 +21,37 @@
 {
     [super viewDidLoad];
     
-    HomeViewController *HomeVC = [[HomeViewController alloc]init];
-    UINavigationController *HomeNVC = [[UINavigationController alloc] initWithRootViewController:HomeVC];
-    HomeNVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"跑得快" image:[[UIImage imageNamed:@"Home"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"use_homepage"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];;
+
+    UITabBarItem *item1 = [[UITabBarItem alloc]initWithTitle:nil image:[[UIImage imageNamed:@"icon_index_blue"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"icon_index_blue"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    item1.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
     
-//    DistributionViewController *dVC = [[DistributionViewController alloc] init];
-//    UINavigationController *dNVC = [[UINavigationController alloc] initWithRootViewController:dVC];
-//    dNVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"配送状态" image:[[UIImage imageNamed:@"Distribution"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"Use_Distribution"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];;
-//    
-//    AirPlainViewController *apVC = [[AirPlainViewController alloc] init];
-//    self.apNVC = [[UINavigationController alloc] initWithRootViewController:apVC];
-//    self.apNVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"上单" image:[[UIImage imageNamed:@"Airplane"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"Use_airplain"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
-//    
-//    MyViewController *mVC = [[MyViewController alloc]init];
-//    UINavigationController *mNVC = [[UINavigationController alloc] initWithRootViewController:mVC];
-//    mNVC.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"主页" image:[[UIImage imageNamed:@"person-1"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"Person_use-1"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    UITabBarItem *item2 = [[UITabBarItem alloc]initWithTitle:nil image:[[UIImage imageNamed:@"icon_danzi_dark"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"icon_danzi_blue"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    item2.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+
+    UITabBarItem *item3 = [[UITabBarItem alloc]initWithTitle:nil image:[[UIImage imageNamed:@"icon_message_dark"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"icon_message_blue"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    item3.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+
+    UITabBarItem *item4 = [[UITabBarItem alloc]initWithTitle:nil image:[[UIImage imageNamed:@"icon_my_dark"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"icon_my_blue"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+    item4.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
+
+ 
+    UINavigationController *homeNVC = [[UINavigationController alloc] initWithRootViewController:[HomeViewController new]];
+    homeNVC.tabBarItem=item1;
+    
+    UINavigationController *orderNVC = [[UINavigationController alloc] initWithRootViewController:[OrderViewController new]];
+    orderNVC.tabBarItem=item2;
+    
+    UINavigationController *msNVC = [[UINavigationController alloc] initWithRootViewController:[MessageViewController new]];
+    msNVC.tabBarItem=item3;
+    
+    UINavigationController *pNVC = [[UINavigationController alloc] initWithRootViewController:[PesonalViewController new]];
+    pNVC.tabBarItem=item4;
+    
     
     self.tabBar.translucent = NO;
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.extendedLayoutIncludesOpaqueBars = NO;
-    [self setViewControllers:@[HomeNVC]];
+    [self setViewControllers:@[homeNVC,orderNVC,msNVC,pNVC]];
     [self setSelectedIndex:0];
 }
 

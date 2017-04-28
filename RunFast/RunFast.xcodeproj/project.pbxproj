@@ -27,9 +27,15 @@
 		C5C281251EAFAA91006B77E7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C281231EAFAA91006B77E7 /* LoginViewController.xib */; };
 		C5C2812C1EAFB46C006B77E7 /* DeformationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281281EAFB46C006B77E7 /* DeformationButton.m */; };
 		C5C2812D1EAFB46C006B77E7 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2812B1EAFB46C006B77E7 /* MMMaterialDesignSpinner.m */; };
-		C5C2813C1EB0E6C9006B77E7 /* AMapNavi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5C2813B1EB0E6C9006B77E7 /* AMapNavi.bundle */; };
-		C5C2813E1EB0E6D7006B77E7 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5C2813D1EB0E6D7006B77E7 /* AMap.bundle */; };
 		C5C281421EB106EA006B77E7 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281411EB106EA006B77E7 /* MapViewController.m */; };
+		C5C2814A1EB18503006B77E7 /* GPSNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281491EB18503006B77E7 /* GPSNaviViewController.m */; };
+		C5C281521EB185D5006B77E7 /* SpeechSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281511EB185D5006B77E7 /* SpeechSynthesizer.m */; };
+		C5C281561EB185DC006B77E7 /* MoreMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281551EB185DC006B77E7 /* MoreMenuView.m */; };
+		C5C2815D1EB1FFAC006B77E7 /* PesonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2815C1EB1FFAC006B77E7 /* PesonalViewController.m */; };
+		C5C281601EB1FFB8006B77E7 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2815F1EB1FFB8006B77E7 /* MessageViewController.m */; };
+		C5C281631EB1FFC4006B77E7 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281621EB1FFC4006B77E7 /* OrderViewController.m */; };
+		C5C281661EB2338F006B77E7 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281651EB2338F006B77E7 /* HomeTableViewCell.m */; };
+		C5C2816A1EB25069006B77E7 /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281691EB25069006B77E7 /* OrderModel.m */; };
 		EC6F63309C7EDB821857F612 /* Pods_RunFast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEED866A11A5463CCF630AE /* Pods_RunFast.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +107,22 @@
 		C5C2813D1EB0E6D7006B77E7 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = Pods/AMap3DMap/MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
 		C5C281401EB106EA006B77E7 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		C5C281411EB106EA006B77E7 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		C5C281481EB18503006B77E7 /* GPSNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSNaviViewController.h; sourceTree = "<group>"; };
+		C5C281491EB18503006B77E7 /* GPSNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSNaviViewController.m; sourceTree = "<group>"; };
+		C5C281501EB185D5006B77E7 /* SpeechSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechSynthesizer.h; sourceTree = "<group>"; };
+		C5C281511EB185D5006B77E7 /* SpeechSynthesizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechSynthesizer.m; sourceTree = "<group>"; };
+		C5C281541EB185DC006B77E7 /* MoreMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreMenuView.h; sourceTree = "<group>"; };
+		C5C281551EB185DC006B77E7 /* MoreMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreMenuView.m; sourceTree = "<group>"; };
+		C5C2815B1EB1FFAC006B77E7 /* PesonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PesonalViewController.h; sourceTree = "<group>"; };
+		C5C2815C1EB1FFAC006B77E7 /* PesonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PesonalViewController.m; sourceTree = "<group>"; };
+		C5C2815E1EB1FFB8006B77E7 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		C5C2815F1EB1FFB8006B77E7 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		C5C281611EB1FFC4006B77E7 /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		C5C281621EB1FFC4006B77E7 /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
+		C5C281641EB2338F006B77E7 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		C5C281651EB2338F006B77E7 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		C5C281681EB25069006B77E7 /* OrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderModel.h; sourceTree = "<group>"; };
+		C5C281691EB25069006B77E7 /* OrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderModel.m; sourceTree = "<group>"; };
 		FE545343A055E146F773574A /* Pods-RunFast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunFast.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunFast/Pods-RunFast.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,6 +285,8 @@
 		C5C280EE1EAB7628006B77E7 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				C5C281531EB185DC006B77E7 /* MoreMenuView */,
+				C5C2814F1EB185D5006B77E7 /* SpeechSynthesizer */,
 				C5C281261EAFB46C006B77E7 /* DeformationButton */,
 			);
 			path = ThirdLib;
@@ -306,6 +330,9 @@
 		C5C281121EAB8BB9006B77E7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C5C2815A1EB1FF8C006B77E7 /* Pesonal */,
+				C5C281591EB1FF84006B77E7 /* Message */,
+				C5C281581EB1FF7C006B77E7 /* Order */,
 				C5C2813F1EB106DD006B77E7 /* Map */,
 				C5C281201EAFAA78006B77E7 /* LoginRegister */,
 				C5C281131EAB8BB9006B77E7 /* Home */,
@@ -320,6 +347,10 @@
 				C5C281141EAB8BB9006B77E7 /* HomeViewController.h */,
 				C5C281151EAB8BB9006B77E7 /* HomeViewController.m */,
 				C5C281161EAB8BB9006B77E7 /* HomeViewController.xib */,
+				C5C281641EB2338F006B77E7 /* HomeTableViewCell.h */,
+				C5C281651EB2338F006B77E7 /* HomeTableViewCell.m */,
+				C5C281681EB25069006B77E7 /* OrderModel.h */,
+				C5C281691EB25069006B77E7 /* OrderModel.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -367,8 +398,55 @@
 			children = (
 				C5C281401EB106EA006B77E7 /* MapViewController.h */,
 				C5C281411EB106EA006B77E7 /* MapViewController.m */,
+				C5C281481EB18503006B77E7 /* GPSNaviViewController.h */,
+				C5C281491EB18503006B77E7 /* GPSNaviViewController.m */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		C5C2814F1EB185D5006B77E7 /* SpeechSynthesizer */ = {
+			isa = PBXGroup;
+			children = (
+				C5C281501EB185D5006B77E7 /* SpeechSynthesizer.h */,
+				C5C281511EB185D5006B77E7 /* SpeechSynthesizer.m */,
+			);
+			path = SpeechSynthesizer;
+			sourceTree = "<group>";
+		};
+		C5C281531EB185DC006B77E7 /* MoreMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				C5C281541EB185DC006B77E7 /* MoreMenuView.h */,
+				C5C281551EB185DC006B77E7 /* MoreMenuView.m */,
+			);
+			path = MoreMenuView;
+			sourceTree = "<group>";
+		};
+		C5C281581EB1FF7C006B77E7 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				C5C281611EB1FFC4006B77E7 /* OrderViewController.h */,
+				C5C281621EB1FFC4006B77E7 /* OrderViewController.m */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		C5C281591EB1FF84006B77E7 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				C5C2815E1EB1FFB8006B77E7 /* MessageViewController.h */,
+				C5C2815F1EB1FFB8006B77E7 /* MessageViewController.m */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		C5C2815A1EB1FF8C006B77E7 /* Pesonal */ = {
+			isa = PBXGroup;
+			children = (
+				C5C2815B1EB1FFAC006B77E7 /* PesonalViewController.h */,
+				C5C2815C1EB1FFAC006B77E7 /* PesonalViewController.m */,
+			);
+			path = Pesonal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +521,11 @@
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 68DLJX32QB;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					C5C280BB1EAB668B006B77E7 = {
 						CreatedOnToolsVersion = 8.2;
@@ -483,8 +566,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5C2813E1EB0E6D7006B77E7 /* AMap.bundle in Resources */,
-				C5C2813C1EB0E6C9006B77E7 /* AMapNavi.bundle in Resources */,
 				C5C281251EAFAA91006B77E7 /* LoginViewController.xib in Resources */,
 				C5C280B61EAB668B006B77E7 /* LaunchScreen.storyboard in Resources */,
 				C5C280B31EAB668B006B77E7 /* Assets.xcassets in Resources */,
@@ -565,12 +646,20 @@
 				C5C2811F1EAB9303006B77E7 /* UserDefaultsUtils.m in Sources */,
 				C5C280AB1EAB668B006B77E7 /* AppDelegate.m in Sources */,
 				C5C281041EAB8196006B77E7 /* NSString+DateFormat.m in Sources */,
+				C5C281631EB1FFC4006B77E7 /* OrderViewController.m in Sources */,
+				C5C2815D1EB1FFAC006B77E7 /* PesonalViewController.m in Sources */,
 				C5C280FD1EAB7F03006B77E7 /* UIImage+ImageWithColor.m in Sources */,
+				C5C2816A1EB25069006B77E7 /* OrderModel.m in Sources */,
+				C5C281601EB1FFB8006B77E7 /* MessageViewController.m in Sources */,
 				C5C2810A1EAB88DE006B77E7 /* UIView+Circle.m in Sources */,
 				C5C2811A1EAB8BB9006B77E7 /* HomeViewController.m in Sources */,
 				C5C280F61EAB791F006B77E7 /* BaseViewController.m in Sources */,
 				C5C281241EAFAA91006B77E7 /* LoginViewController.m in Sources */,
+				C5C281521EB185D5006B77E7 /* SpeechSynthesizer.m in Sources */,
+				C5C2814A1EB18503006B77E7 /* GPSNaviViewController.m in Sources */,
+				C5C281661EB2338F006B77E7 /* HomeTableViewCell.m in Sources */,
 				C5C2811C1EAB8BB9006B77E7 /* MainTabBarViewController.m in Sources */,
+				C5C281561EB185DC006B77E7 /* MoreMenuView.m in Sources */,
 				C5C2812D1EAFB46C006B77E7 /* MMMaterialDesignSpinner.m in Sources */,
 				C5C2812C1EAFB46C006B77E7 /* DeformationButton.m in Sources */,
 				C5C281421EB106EA006B77E7 /* MapViewController.m in Sources */,
@@ -725,7 +814,7 @@
 				);
 				GCC_PREFIX_HEADER = "/Users/BigGIfts/Documents/ios开发学习/RunFast_IOS/RunFast/RunFast/RF-Prefix.pch";
 				INFOPLIST_FILE = RunFast/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bigGIfts.RunFast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -747,7 +836,7 @@
 				);
 				GCC_PREFIX_HEADER = "/Users/BigGIfts/Documents/ios开发学习/RunFast_IOS/RunFast/RunFast/RF-Prefix.pch";
 				INFOPLIST_FILE = RunFast/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bigGIfts.RunFast;
 				PRODUCT_NAME = "$(TARGET_NAME)";

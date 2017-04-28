@@ -7,9 +7,11 @@
 //
 
 #import "HomeViewController.h"
-#import "MapViewController.h"
+#import "HomeTableViewCell.h"
 
-@interface HomeViewController ()
+@interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@property(nonatomic,strong)UITableView *tableview;
 
 @end
 
@@ -18,17 +20,60 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton *btn=[[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
-    btn.backgroundColor=CBLUE;
-    [btn addTarget:self action:@selector(toMapView) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    self.navigationItem.title= @"跑得快";
+    self.view.backgroundColor=BG_COLOR;
+
+    [self loadUI];
 }
 
--(void)toMapView{
-    MapViewController *vc=[[MapViewController alloc]init];
-    vc.hidesBottomBarWhenPushed=YES;
-    [self.navigationController pushViewController:vc animated:YES];
+- (void)viewWillAppear:(BOOL)animated{
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
+
+-(void)loadUI{
+    _tableview = [[UITableView alloc] initWithFrame:CGRectMake(20, 0, SCREEN_WIDTH-40, SCREEN_HEIGHT-64-44) style:UITableViewStylePlain];
+    _tableview.delegate = self;
+    _tableview.dataSource = self;
+    _tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _tableview.clipsToBounds = NO;
+    _tableview.showsVerticalScrollIndicator=NO;
+    [_tableview setBackgroundColor:[UIColor clearColor]];
+    [self.view addSubview:_tableview];
+}
+
+#pragma mark - tableview delegate
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 128.f;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellID=@"cellID";
+    HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if(nil==cell){
+        cell=[[HomeTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+    }
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+//设置cell分割线做对齐
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPat{
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]){
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

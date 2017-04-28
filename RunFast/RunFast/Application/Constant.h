@@ -21,8 +21,8 @@
 #define CEBLUE Rgb2UIColor(100 , 221, 176, 1) //主色
 
 #define BG_COLOR Rgb2UIColor(240 , 242, 243, 1) //背景色
-#define FONTCOLOR Rgb2UIColor(154 , 169, 177, 1) //主要字体色
-#define TintColor Rgb2UIColor(60 , 60, 60, 1) //TintColor
+#define FONTCOLOR Rgb2UIColor(60 , 60, 60, 1) //主要字体色
+#define TintColor Rgb2UIColor(154 , 169, 177, 1) //TintColor
 
 #define LINE_COLOR Rgb2UIColor(225 , 225, 225, 1) //线条色
 
@@ -42,5 +42,7 @@
 __POINTER == (NSString *)[NSNull null] || \
 ![__POINTER isKindOfClass:[NSString class]] || \
 ![__POINTER length])
+
+const static NSString *APIKey = @"12030938e5af9ed1e65c9da96728c6d7";
 
 #endif /* Constant_h */
