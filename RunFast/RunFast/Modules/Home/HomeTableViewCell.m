@@ -55,10 +55,10 @@
              make.left.mas_equalTo(_view.mas_left).offset(15);
          }];
          
-         UIButton *btn=[[UIButton alloc]init];
-         [btn setBackgroundImage:[UIImage imageNamed:@"icon_qiang"] forState:UIControlStateNormal];
-         [self addSubview:btn];
-         [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+         _getbtn=[[DGThumbUpButton alloc]init];
+//         [btn setBackgroundImage:[UIImage imageNamed:@"icon_qiang"] forState:UIControlStateNormal];
+         [self addSubview:_getbtn];
+         [_getbtn mas_makeConstraints:^(MASConstraintMaker *make) {
              make.centerY.equalTo(self.mas_centerY).offset(10);
              make.right.mas_equalTo(self.mas_right).offset(-15);
          }];

@@ -36,6 +36,10 @@
 		C5C281631EB1FFC4006B77E7 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281621EB1FFC4006B77E7 /* OrderViewController.m */; };
 		C5C281661EB2338F006B77E7 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281651EB2338F006B77E7 /* HomeTableViewCell.m */; };
 		C5C2816A1EB25069006B77E7 /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281691EB25069006B77E7 /* OrderModel.m */; };
+		C5C281711EB2D898006B77E7 /* DGExplodeAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2816E1EB2D898006B77E7 /* DGExplodeAnimationView.m */; };
+		C5C281721EB2D898006B77E7 /* DGThumbUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281701EB2D898006B77E7 /* DGThumbUpButton.m */; };
+		C5C2817C1EB32185006B77E7 /* JTSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C2817A1EB32185006B77E7 /* JTSegmentControl.swift */; };
+		C5C2817D1EB32185006B77E7 /* JTSegmentPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C2817B1EB32185006B77E7 /* JTSegmentPattern.swift */; };
 		EC6F63309C7EDB821857F612 /* Pods_RunFast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEED866A11A5463CCF630AE /* Pods_RunFast.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +127,13 @@
 		C5C281651EB2338F006B77E7 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
 		C5C281681EB25069006B77E7 /* OrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderModel.h; sourceTree = "<group>"; };
 		C5C281691EB25069006B77E7 /* OrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderModel.m; sourceTree = "<group>"; };
+		C5C2816D1EB2D898006B77E7 /* DGExplodeAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGExplodeAnimationView.h; sourceTree = "<group>"; };
+		C5C2816E1EB2D898006B77E7 /* DGExplodeAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGExplodeAnimationView.m; sourceTree = "<group>"; };
+		C5C2816F1EB2D898006B77E7 /* DGThumbUpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGThumbUpButton.h; sourceTree = "<group>"; };
+		C5C281701EB2D898006B77E7 /* DGThumbUpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGThumbUpButton.m; sourceTree = "<group>"; };
+		C5C281731EB2E974006B77E7 /* RunFast-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunFast-Bridging-Header.h"; sourceTree = "<group>"; };
+		C5C2817A1EB32185006B77E7 /* JTSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTSegmentControl.swift; sourceTree = "<group>"; };
+		C5C2817B1EB32185006B77E7 /* JTSegmentPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTSegmentPattern.swift; sourceTree = "<group>"; };
 		FE545343A055E146F773574A /* Pods-RunFast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunFast.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunFast/Pods-RunFast.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -285,6 +296,8 @@
 		C5C280EE1EAB7628006B77E7 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				C5C281791EB32185006B77E7 /* JTSegmentControl */,
+				C5C2816C1EB2D898006B77E7 /* DGThumbUpButton */,
 				C5C281531EB185DC006B77E7 /* MoreMenuView */,
 				C5C2814F1EB185D5006B77E7 /* SpeechSynthesizer */,
 				C5C281261EAFB46C006B77E7 /* DeformationButton */,
@@ -337,6 +350,7 @@
 				C5C281201EAFAA78006B77E7 /* LoginRegister */,
 				C5C281131EAB8BB9006B77E7 /* Home */,
 				C5C281171EAB8BB9006B77E7 /* Main */,
+				C5C281731EB2E974006B77E7 /* RunFast-Bridging-Header.h */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -449,6 +463,26 @@
 			path = Pesonal;
 			sourceTree = "<group>";
 		};
+		C5C2816C1EB2D898006B77E7 /* DGThumbUpButton */ = {
+			isa = PBXGroup;
+			children = (
+				C5C2816D1EB2D898006B77E7 /* DGExplodeAnimationView.h */,
+				C5C2816E1EB2D898006B77E7 /* DGExplodeAnimationView.m */,
+				C5C2816F1EB2D898006B77E7 /* DGThumbUpButton.h */,
+				C5C281701EB2D898006B77E7 /* DGThumbUpButton.m */,
+			);
+			path = DGThumbUpButton;
+			sourceTree = "<group>";
+		};
+		C5C281791EB32185006B77E7 /* JTSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				C5C2817A1EB32185006B77E7 /* JTSegmentControl.swift */,
+				C5C2817B1EB32185006B77E7 /* JTSegmentPattern.swift */,
+			);
+			path = JTSegmentControl;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -520,6 +554,7 @@
 					C5C280A21EAB668B006B77E7 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 68DLJX32QB;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -642,17 +677,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C281721EB2D898006B77E7 /* DGThumbUpButton.m in Sources */,
 				C5C281011EAB800D006B77E7 /* UIImage+Scale.m in Sources */,
 				C5C2811F1EAB9303006B77E7 /* UserDefaultsUtils.m in Sources */,
 				C5C280AB1EAB668B006B77E7 /* AppDelegate.m in Sources */,
 				C5C281041EAB8196006B77E7 /* NSString+DateFormat.m in Sources */,
 				C5C281631EB1FFC4006B77E7 /* OrderViewController.m in Sources */,
 				C5C2815D1EB1FFAC006B77E7 /* PesonalViewController.m in Sources */,
+				C5C2817C1EB32185006B77E7 /* JTSegmentControl.swift in Sources */,
 				C5C280FD1EAB7F03006B77E7 /* UIImage+ImageWithColor.m in Sources */,
 				C5C2816A1EB25069006B77E7 /* OrderModel.m in Sources */,
 				C5C281601EB1FFB8006B77E7 /* MessageViewController.m in Sources */,
 				C5C2810A1EAB88DE006B77E7 /* UIView+Circle.m in Sources */,
 				C5C2811A1EAB8BB9006B77E7 /* HomeViewController.m in Sources */,
+				C5C2817D1EB32185006B77E7 /* JTSegmentPattern.swift in Sources */,
 				C5C280F61EAB791F006B77E7 /* BaseViewController.m in Sources */,
 				C5C281241EAFAA91006B77E7 /* LoginViewController.m in Sources */,
 				C5C281521EB185D5006B77E7 /* SpeechSynthesizer.m in Sources */,
@@ -660,6 +698,7 @@
 				C5C281661EB2338F006B77E7 /* HomeTableViewCell.m in Sources */,
 				C5C2811C1EAB8BB9006B77E7 /* MainTabBarViewController.m in Sources */,
 				C5C281561EB185DC006B77E7 /* MoreMenuView.m in Sources */,
+				C5C281711EB2D898006B77E7 /* DGExplodeAnimationView.m in Sources */,
 				C5C2812D1EAFB46C006B77E7 /* MMMaterialDesignSpinner.m in Sources */,
 				C5C2812C1EAFB46C006B77E7 /* DeformationButton.m in Sources */,
 				C5C281421EB106EA006B77E7 /* MapViewController.m in Sources */,
@@ -804,6 +843,8 @@
 			baseConfigurationReference = 56620C52A92ACC9AE8461DE6 /* Pods-RunFast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 68DLJX32QB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -818,6 +859,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bigGIfts.RunFast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunFast/Modules/RunFast-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -826,6 +870,8 @@
 			baseConfigurationReference = FE545343A055E146F773574A /* Pods-RunFast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 68DLJX32QB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -840,12 +886,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bigGIfts.RunFast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunFast/Modules/RunFast-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		C5C280D41EAB668B006B77E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 68DLJX32QB;
 				INFOPLIST_FILE = RunFastTests/Info.plist;
@@ -859,6 +908,7 @@
 		C5C280D51EAB668B006B77E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 68DLJX32QB;
 				INFOPLIST_FILE = RunFastTests/Info.plist;
@@ -872,6 +922,7 @@
 		C5C280D71EAB668B006B77E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 68DLJX32QB;
 				INFOPLIST_FILE = RunFastUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -884,6 +935,7 @@
 		C5C280D81EAB668B006B77E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 68DLJX32QB;
 				INFOPLIST_FILE = RunFastUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

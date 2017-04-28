@@ -9,7 +9,9 @@
 #import "HomeViewController.h"
 #import "HomeTableViewCell.h"
 
-@interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource> {
+    NSMutableArray *dataArr;
+}
 
 @property(nonatomic,strong)UITableView *tableview;
 
@@ -22,7 +24,8 @@
     [super viewDidLoad];
     self.navigationItem.title= @"跑得快";
     self.view.backgroundColor=BG_COLOR;
-
+    dataArr=[[NSMutableArray alloc]init];
+    dataArr=[@[@1,@2,@3,@4,@5,@6,@7,@8,@9,@10] mutableCopy];
     [self loadUI];
 }
 
@@ -44,7 +47,7 @@
 #pragma mark - tableview delegate
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return dataArr.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -57,6 +60,14 @@
     if(nil==cell){
         cell=[[HomeTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.getbtn.clickButton = ^(){
+        [dataArr removeObjectAtIndex:indexPath.row];
+        [_tableview beginUpdates];
+        [_tableview deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationTop];
+        [_tableview endUpdates];
+        [_tableview reloadData];
+    };
     return cell;
 }
 

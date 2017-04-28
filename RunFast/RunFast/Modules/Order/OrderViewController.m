@@ -8,9 +8,10 @@
 
 #import "OrderViewController.h"
 #import "GPSNaviViewController.h"
-#import "MapViewController.h"
+//#import "MapViewController.h"
+#import "RunFast-swift.h"
 
-@interface OrderViewController ()
+@interface OrderViewController () <JTSegmentControlDelegate>
 
 @end
 
@@ -18,10 +19,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title= @"单子";
     UIBarButtonItem *gpsBtn=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_daohang"]
                                                             style:UIBarButtonItemStylePlain target:self action:@selector(toMapView)];
     
     self.navigationItem.rightBarButtonItem = gpsBtn;
+    
+    JTSegmentControl *segmentedControl = [[JTSegmentControl alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
+    segmentedControl.delegate = self;
+    segmentedControl.items = @[@"待交接 ", @"待送达", @"已完成"];
+    [segmentedControl showBridgeWithShow:true index:1];
+    segmentedControl.autoScrollWhenIndexChange = false;
+    [self.view addSubview:segmentedControl];
 }
 
 -(void)toMapView{
