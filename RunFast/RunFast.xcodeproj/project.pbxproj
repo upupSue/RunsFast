@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C54D22441EBC63320067B281 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D22421EBC63320067B281 /* LoadingView.swift */; };
+		C54D224C1EBC8DC40067B281 /* OrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C54D224B1EBC8DC40067B281 /* OrderTableViewCell.m */; };
+		C54D22501EBF57ED0067B281 /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54D224F1EBF57ED0067B281 /* BaseTableView.m */; };
+		C54D22531EBF59E10067B281 /* KBPlaceHolderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54D22521EBF59E10067B281 /* KBPlaceHolderTableView.m */; };
 		C5C280A81EAB668B006B77E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C280A71EAB668B006B77E7 /* main.m */; };
 		C5C280AB1EAB668B006B77E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C280AA1EAB668B006B77E7 /* AppDelegate.m */; };
 		C5C280B31EAB668B006B77E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C280B21EAB668B006B77E7 /* Assets.xcassets */; };
@@ -63,6 +67,13 @@
 /* Begin PBXFileReference section */
 		4FEED866A11A5463CCF630AE /* Pods_RunFast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunFast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56620C52A92ACC9AE8461DE6 /* Pods-RunFast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunFast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RunFast/Pods-RunFast.debug.xcconfig"; sourceTree = "<group>"; };
+		C54D22421EBC63320067B281 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		C54D224A1EBC8DC40067B281 /* OrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewCell.h; sourceTree = "<group>"; };
+		C54D224B1EBC8DC40067B281 /* OrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewCell.m; sourceTree = "<group>"; };
+		C54D224E1EBF57ED0067B281 /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
+		C54D224F1EBF57ED0067B281 /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
+		C54D22511EBF59E10067B281 /* KBPlaceHolderTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBPlaceHolderTableView.h; sourceTree = "<group>"; };
+		C54D22521EBF59E10067B281 /* KBPlaceHolderTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBPlaceHolderTableView.m; sourceTree = "<group>"; };
 		C5C280A31EAB668B006B77E7 /* RunFast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunFast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C280A71EAB668B006B77E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5C280A91EAB668B006B77E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -183,6 +194,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C54D22411EBC63320067B281 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				C54D22421EBC63320067B281 /* LoadingView.swift */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
 		C5C2809A1EAB668B006B77E7 = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +315,7 @@
 		C5C280EE1EAB7628006B77E7 /* ThirdLib */ = {
 			isa = PBXGroup;
 			children = (
+				C54D22411EBC63320067B281 /* LoadingView */,
 				C5C281791EB32185006B77E7 /* JTSegmentControl */,
 				C5C2816C1EB2D898006B77E7 /* DGThumbUpButton */,
 				C5C281531EB185DC006B77E7 /* MoreMenuView */,
@@ -334,6 +354,10 @@
 		C5C280F31EAB78FA006B77E7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C54D22511EBF59E10067B281 /* KBPlaceHolderTableView.h */,
+				C54D22521EBF59E10067B281 /* KBPlaceHolderTableView.m */,
+				C54D224E1EBF57ED0067B281 /* BaseTableView.h */,
+				C54D224F1EBF57ED0067B281 /* BaseTableView.m */,
 				C5C280F41EAB791F006B77E7 /* BaseViewController.h */,
 				C5C280F51EAB791F006B77E7 /* BaseViewController.m */,
 			);
@@ -441,6 +465,8 @@
 			children = (
 				C5C281611EB1FFC4006B77E7 /* OrderViewController.h */,
 				C5C281621EB1FFC4006B77E7 /* OrderViewController.m */,
+				C54D224A1EBC8DC40067B281 /* OrderTableViewCell.h */,
+				C54D224B1EBC8DC40067B281 /* OrderTableViewCell.m */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -681,7 +707,9 @@
 				C5C281011EAB800D006B77E7 /* UIImage+Scale.m in Sources */,
 				C5C2811F1EAB9303006B77E7 /* UserDefaultsUtils.m in Sources */,
 				C5C280AB1EAB668B006B77E7 /* AppDelegate.m in Sources */,
+				C54D22531EBF59E10067B281 /* KBPlaceHolderTableView.m in Sources */,
 				C5C281041EAB8196006B77E7 /* NSString+DateFormat.m in Sources */,
+				C54D22441EBC63320067B281 /* LoadingView.swift in Sources */,
 				C5C281631EB1FFC4006B77E7 /* OrderViewController.m in Sources */,
 				C5C2815D1EB1FFAC006B77E7 /* PesonalViewController.m in Sources */,
 				C5C2817C1EB32185006B77E7 /* JTSegmentControl.swift in Sources */,
@@ -693,6 +721,8 @@
 				C5C2817D1EB32185006B77E7 /* JTSegmentPattern.swift in Sources */,
 				C5C280F61EAB791F006B77E7 /* BaseViewController.m in Sources */,
 				C5C281241EAFAA91006B77E7 /* LoginViewController.m in Sources */,
+				C54D224C1EBC8DC40067B281 /* OrderTableViewCell.m in Sources */,
+				C54D22501EBF57ED0067B281 /* BaseTableView.m in Sources */,
 				C5C281521EB185D5006B77E7 /* SpeechSynthesizer.m in Sources */,
 				C5C2814A1EB18503006B77E7 /* GPSNaviViewController.m in Sources */,
 				C5C281661EB2338F006B77E7 /* HomeTableViewCell.m in Sources */,

@@ -13,8 +13,8 @@ struct JTSegmentPattern {
     static let itemTextColor = color(red: 62, green: 62, blue: 62, alpha: 1.0)
     static let itemSelectedTextColor = color(red: 35, green: 214, blue: 163, alpha: 1.0)
     
-    static let itemBackgroundColor = color(red: 252.0, green: 255.0, blue: 252.0, alpha: 1.0)
-    static let itemSelectedBackgroundColor = color(red: 252.0, green: 255.0, blue: 252.0, alpha: 1.0)
+    static let itemBackgroundColor = color(red: 255.0, green: 255.0, blue: 255.0, alpha: 1.0)
+    static let itemSelectedBackgroundColor = color(red: 255.0, green: 255.0, blue: 255.0, alpha: 1.0)
     
     static let itemBorder : CGFloat = 20.0
     //MARK - Text font
