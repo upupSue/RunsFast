@@ -16,5 +16,4 @@
 #import <AFNetworking/AFNetworking.h>
 #import <Masonry/Masonry.h>
 #import "YYModel.h"
-#import "BaseTableView.h"
 #endif /* RF_Prefix_pch */

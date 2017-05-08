@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		C54D22441EBC63320067B281 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54D22421EBC63320067B281 /* LoadingView.swift */; };
 		C54D224C1EBC8DC40067B281 /* OrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C54D224B1EBC8DC40067B281 /* OrderTableViewCell.m */; };
-		C54D22501EBF57ED0067B281 /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54D224F1EBF57ED0067B281 /* BaseTableView.m */; };
-		C54D22531EBF59E10067B281 /* KBPlaceHolderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C54D22521EBF59E10067B281 /* KBPlaceHolderTableView.m */; };
+		C54D22551EC044F30067B281 /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = C54D22541EC044F30067B281 /* storehouse.plist */; };
+		C54D22601EC073000067B281 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54D225E1EC073000067B281 /* RegisterViewController.m */; };
+		C54D22611EC073000067B281 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C54D225F1EC073000067B281 /* RegisterViewController.xib */; };
 		C5C280A81EAB668B006B77E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C280A71EAB668B006B77E7 /* main.m */; };
 		C5C280AB1EAB668B006B77E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C280AA1EAB668B006B77E7 /* AppDelegate.m */; };
 		C5C280B31EAB668B006B77E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C280B21EAB668B006B77E7 /* Assets.xcassets */; };
@@ -70,10 +71,10 @@
 		C54D22421EBC63320067B281 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		C54D224A1EBC8DC40067B281 /* OrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderTableViewCell.h; sourceTree = "<group>"; };
 		C54D224B1EBC8DC40067B281 /* OrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderTableViewCell.m; sourceTree = "<group>"; };
-		C54D224E1EBF57ED0067B281 /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
-		C54D224F1EBF57ED0067B281 /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
-		C54D22511EBF59E10067B281 /* KBPlaceHolderTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KBPlaceHolderTableView.h; sourceTree = "<group>"; };
-		C54D22521EBF59E10067B281 /* KBPlaceHolderTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KBPlaceHolderTableView.m; sourceTree = "<group>"; };
+		C54D22541EC044F30067B281 /* storehouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = storehouse.plist; sourceTree = "<group>"; };
+		C54D225D1EC073000067B281 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		C54D225E1EC073000067B281 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		C54D225F1EC073000067B281 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		C5C280A31EAB668B006B77E7 /* RunFast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunFast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C280A71EAB668B006B77E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C5C280A91EAB668B006B77E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -118,8 +119,6 @@
 		C5C281331EB0CD88006B77E7 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapFoundationKit.framework; path = Pods/AMapFoundation/AMapFoundationKit.framework; sourceTree = "<group>"; };
 		C5C281351EB0D2DA006B77E7 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = Pods/AMap3DMap/MAMapKit.framework; sourceTree = "<group>"; };
 		C5C281371EB0D610006B77E7 /* AMapNaviKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapNaviKit.framework; path = Pods/AMapNavi/AMapNaviKit.framework; sourceTree = "<group>"; };
-		C5C2813B1EB0E6C9006B77E7 /* AMapNavi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMapNavi.bundle; path = Pods/AMapNavi/AMapNaviKit.framework/AMapNavi.bundle; sourceTree = "<group>"; };
-		C5C2813D1EB0E6D7006B77E7 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = Pods/AMap3DMap/MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
 		C5C281401EB106EA006B77E7 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		C5C281411EB106EA006B77E7 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		C5C281481EB18503006B77E7 /* GPSNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSNaviViewController.h; sourceTree = "<group>"; };
@@ -205,8 +204,6 @@
 		C5C2809A1EAB668B006B77E7 = {
 			isa = PBXGroup;
 			children = (
-				C5C2813D1EB0E6D7006B77E7 /* AMap.bundle */,
-				C5C2813B1EB0E6C9006B77E7 /* AMapNavi.bundle */,
 				C5C280A51EAB668B006B77E7 /* RunFast */,
 				C5C280BF1EAB668B006B77E7 /* RunFastTests */,
 				C5C280CA1EAB668B006B77E7 /* RunFastUITests */,
@@ -282,6 +279,7 @@
 		C5C280E01EAB6DBE006B77E7 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				C54D22541EC044F30067B281 /* storehouse.plist */,
 				C5C280B21EAB668B006B77E7 /* Assets.xcassets */,
 			);
 			path = Resource;
@@ -354,10 +352,6 @@
 		C5C280F31EAB78FA006B77E7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				C54D22511EBF59E10067B281 /* KBPlaceHolderTableView.h */,
-				C54D22521EBF59E10067B281 /* KBPlaceHolderTableView.m */,
-				C54D224E1EBF57ED0067B281 /* BaseTableView.h */,
-				C54D224F1EBF57ED0067B281 /* BaseTableView.m */,
 				C5C280F41EAB791F006B77E7 /* BaseViewController.h */,
 				C5C280F51EAB791F006B77E7 /* BaseViewController.m */,
 			);
@@ -408,6 +402,9 @@
 				C5C281211EAFAA91006B77E7 /* LoginViewController.h */,
 				C5C281221EAFAA91006B77E7 /* LoginViewController.m */,
 				C5C281231EAFAA91006B77E7 /* LoginViewController.xib */,
+				C54D225D1EC073000067B281 /* RegisterViewController.h */,
+				C54D225E1EC073000067B281 /* RegisterViewController.m */,
+				C54D225F1EC073000067B281 /* RegisterViewController.xib */,
 			);
 			path = LoginRegister;
 			sourceTree = "<group>";
@@ -628,9 +625,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C281251EAFAA91006B77E7 /* LoginViewController.xib in Resources */,
+				C54D22551EC044F30067B281 /* storehouse.plist in Resources */,
 				C5C280B61EAB668B006B77E7 /* LaunchScreen.storyboard in Resources */,
 				C5C280B31EAB668B006B77E7 /* Assets.xcassets in Resources */,
 				C5C2811B1EAB8BB9006B77E7 /* HomeViewController.xib in Resources */,
+				C54D22611EC073000067B281 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,7 +706,6 @@
 				C5C281011EAB800D006B77E7 /* UIImage+Scale.m in Sources */,
 				C5C2811F1EAB9303006B77E7 /* UserDefaultsUtils.m in Sources */,
 				C5C280AB1EAB668B006B77E7 /* AppDelegate.m in Sources */,
-				C54D22531EBF59E10067B281 /* KBPlaceHolderTableView.m in Sources */,
 				C5C281041EAB8196006B77E7 /* NSString+DateFormat.m in Sources */,
 				C54D22441EBC63320067B281 /* LoadingView.swift in Sources */,
 				C5C281631EB1FFC4006B77E7 /* OrderViewController.m in Sources */,
@@ -722,7 +720,6 @@
 				C5C280F61EAB791F006B77E7 /* BaseViewController.m in Sources */,
 				C5C281241EAFAA91006B77E7 /* LoginViewController.m in Sources */,
 				C54D224C1EBC8DC40067B281 /* OrderTableViewCell.m in Sources */,
-				C54D22501EBF57ED0067B281 /* BaseTableView.m in Sources */,
 				C5C281521EB185D5006B77E7 /* SpeechSynthesizer.m in Sources */,
 				C5C2814A1EB18503006B77E7 /* GPSNaviViewController.m in Sources */,
 				C5C281661EB2338F006B77E7 /* HomeTableViewCell.m in Sources */,
@@ -730,6 +727,7 @@
 				C5C281561EB185DC006B77E7 /* MoreMenuView.m in Sources */,
 				C5C281711EB2D898006B77E7 /* DGExplodeAnimationView.m in Sources */,
 				C5C2812D1EAFB46C006B77E7 /* MMMaterialDesignSpinner.m in Sources */,
+				C54D22601EC073000067B281 /* RegisterViewController.m in Sources */,
 				C5C2812C1EAFB46C006B77E7 /* DeformationButton.m in Sources */,
 				C5C281421EB106EA006B77E7 /* MapViewController.m in Sources */,
 				C5C280A81EAB668B006B77E7 /* main.m in Sources */,

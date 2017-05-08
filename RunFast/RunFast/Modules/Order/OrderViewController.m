@@ -8,15 +8,15 @@
 
 #import "OrderViewController.h"
 #import "GPSNaviViewController.h"
-//#import "MapViewController.h"
 #import "RunFast-swift.h"
 #import "OrderTableViewCell.h"
-#import "BaseTableView.h"
+#import "SVPullToRefresh.h"
 
-@interface OrderViewController () <JTSegmentControlDelegate,UITableViewDelegate, UITableViewDataSource,KBPlaceHolderTableViewDelegate> {
+@interface OrderViewController () <JTSegmentControlDelegate,UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *dataArr;
+    JTSegmentControl *segmentedControl;
 }
-@property(nonatomic,strong)BaseTableView *tableview;
+@property(nonatomic,strong)UITableView *tableview;
 @end
 
 @implementation OrderViewController
@@ -24,8 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title= @"单子";
-    UIBarButtonItem *gpsBtn=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_daohang"]
-                                                            style:UIBarButtonItemStylePlain target:self action:@selector(toMapView)];
+    UIBarButtonItem *gpsBtn=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_daohang"] style:UIBarButtonItemStylePlain target:self action:@selector(toMapView)];
     
     self.navigationItem.rightBarButtonItem = gpsBtn;
     [self loadUI];
@@ -42,19 +41,39 @@
 }
 
 -(void)loadUI{
-    _tableview = [[BaseTableView alloc] initWithFrame:CGRectMake(0, 45, SCREEN_WIDTH, SCREEN_HEIGHT-64-40-45) style:UITableViewStylePlain];
-    [_tableview initRefresh];
+    _tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, 45, SCREEN_WIDTH, SCREEN_HEIGHT-64-40-45) style:UITableViewStylePlain];
     _tableview.delegate = self;
     _tableview.dataSource = self;
-    _tableview.kbDelegate=self;
     _tableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableview.clipsToBounds = NO;
     _tableview.showsVerticalScrollIndicator=NO;
     [_tableview setBackgroundColor:[UIColor clearColor]];
-    [_tableview setHeaderRefreshingTarget:self refreshingAction:@selector(loadData)];
+
+    __weak typeof(self) weakSelf = self;
+    [_tableview addPullToRefreshWithActionHandler:^{
+//        [weakSelf refreshTableView];
+        //3秒后调用refreshTableView方法
+        [weakSelf performSelector:@selector(loadData) withObject:nil afterDelay:1.0];
+        //风火轮的动画还需要我们手动的停止
+
+    }];
+    UIView *tView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 10)];
+    tView.backgroundColor=[UIColor blackColor];
+    UIView *aView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 10)];
+    aView.backgroundColor=[UIColor redColor];
+    UIView *bView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 10)];
+    bView.backgroundColor=[UIColor blueColor];
+//    [_tableview.pullToRefreshView setTitle:@"下拉以刷新" forState:SVPullToRefreshStateTriggered];
+//    [_tableview.pullToRefreshView setTitle:@"刷新完了呀" forState:SVPullToRefreshStateStopped];
+//    [_tableview.pullToRefreshView setTitle:@"不要命的加载中..." forState:SVPullToRefreshStateLoading];
+    [_tableview.pullToRefreshView setCustomView:aView forState:SVPullToRefreshStateTriggered];
+    [_tableview.pullToRefreshView setCustomView:bView forState:SVPullToRefreshStateStopped];
+    [_tableview.pullToRefreshView setCustomView:tView forState:SVPullToRefreshStateLoading];
+
+    [_tableview triggerPullToRefresh];
     [self.view addSubview:_tableview];
-    
-    JTSegmentControl *segmentedControl = [[JTSegmentControl alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
+        
+    segmentedControl = [[JTSegmentControl alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
     segmentedControl.delegate = self;
     segmentedControl.items = @[@"待交接 ", @"待送达", @"已完成"];
     [segmentedControl showBridgeWithShow:true index:1];
@@ -64,23 +83,15 @@
 
 -(void)loadData{
 //success
-     [_tableview endHeaderRefreshing];
+    [_tableview.pullToRefreshView stopAnimating];
 //failed
-//    [_tableview endHeaderRefreshing];
+//    [_tableview.pullToRefreshView stopAnimating];
 }
 
-#pragma mark - tableView delegate
-- (UIView *)kbPlaceHolderTableView:(KBPlaceHolderTableView *)tableView{
-    UIView *kbView=[[UIView alloc]initWithFrame:CGRectMake(0, 40, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    UILabel *kbpLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 130, SCREEN_WIDTH, 20)];
-    [kbpLabel setTextAlignment:NSTextAlignmentCenter];
-    [kbpLabel setFont:[UIFont systemFontOfSize:15]];
-    [kbpLabel setTextColor:FONTCOLOR];
-    [kbpLabel setText:@"meiyou"];
-    [kbView addSubview:kbpLabel];
-    return kbView;
+-(void)refreshTableView{
+    [self loadData];
 }
-
+     
 #pragma mark - tableview delegate
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -98,7 +109,9 @@
         cell=[[OrderTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
+    cell.block= ^{
+        [segmentedControl moveTo:1 animated:YES];
+    };
     return cell;
 }
 
@@ -119,6 +132,5 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 @end

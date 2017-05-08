@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OrderModel.h"
+
+typedef void(^MyBlock)(void);
 
 @interface OrderTableViewCell : UITableViewCell
 
@@ -16,5 +19,8 @@
 @property(nonatomic,strong)UILabel *time;
 @property(nonatomic,strong)UILabel *deliveryNum;
 @property(nonatomic,strong)UIImageView *shopImg;
+@property (nonatomic,copy)MyBlock block;
+
+-(void)config:(OrderModel *)model;
 
 @end

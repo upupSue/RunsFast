@@ -11,16 +11,24 @@
 @interface OrderModel : NSObject
 
 /**
- *  收款账户 ID
+ * 商家名
  */
 @property (nonatomic, copy) NSString *name;
 /**
- *  类型 1:支付宝  2：微信支付  3：银行卡
+ * 订单数量
  */
 @property (nonatomic, copy) NSString *odrnum;
 /**
- *  (姓名/微信账号/银行开户名)
+ * 订单地点
  */
 @property (nonatomic, copy) NSString *addr;
+/**
+ * 配送编号
+ */
+@property (nonatomic, copy) NSString *delNum;
+/**
+ * 商家图片
+ */
+@property (nonatomic, copy) NSString *shopImg;
 
 @end

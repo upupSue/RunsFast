@@ -26,21 +26,21 @@ PODS:
   - IQKeyboardManager (4.0.7)
   - Masonry (1.0.2)
   - MBProgressHUD (0.9.2)
-  - MJRefresh (3.1.12)
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
   - SDWebImage/Core (3.7.6)
+  - SVPullToRefresh (0.4.1)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
-  - AMapNavi
+  - AMapNavi (~> 5.0.0)
   - FMDB (~> 2.6.2)
   - IQKeyboardManager (~> 4.0.3)
   - Masonry (~> 1.0.1)
   - MBProgressHUD (~> 0.9.2)
-  - MJRefresh (~> 3.1.0)
   - SDWebImage (~> 3.7.6)
+  - SVPullToRefresh
   - YYModel (~> 1.0.3)
 
 SPEC CHECKSUMS:
@@ -52,10 +52,10 @@ SPEC CHECKSUMS:
   IQKeyboardManager: 69002bb4fea60596b710e57d426abc00e5063630
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: eba3bceef43f67ddcc0e3b6fec096c1c86855839
+PODFILE CHECKSUM: 42d60220953d0fcca98da14e2fdd90df5c270e38
 
 COCOAPODS: 1.0.1

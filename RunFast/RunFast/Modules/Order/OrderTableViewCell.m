@@ -127,6 +127,22 @@
             make.left.mas_equalTo(bgView.mas_centerX).offset(16);
         }];
         
+        
+        UIButton *mybtn=[[UIButton alloc]init];
+        [mybtn setTitle:@"确认交接" forState:UIControlStateNormal];
+        [mybtn setTitleColor:SBLUE forState:UIControlStateNormal];
+        mybtn.titleLabel.font=[UIFont systemFontOfSize:10];
+        [mybtn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
+        [bgView addSubview:mybtn];
+        [mybtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerY.mas_equalTo(delImg.mas_centerY);
+            make.right.mas_equalTo(bgView.mas_right).offset(-14);
+            make.size.mas_equalTo(CGSizeMake(60, 22));
+        }];
+        mybtn.layer.cornerRadius=3;
+        mybtn.layer.borderWidth=1;
+        mybtn.layer.borderColor=SBLUE.CGColor;
+        
         self.shopName.text=@"阿达的美食店";
         self.odrNum.text=@"10";
         self.odrAddr.text=@"山南一幢";
@@ -139,6 +155,17 @@
     return self;
 }
 
+-(void)config:(OrderModel *)model{
+//    self.shopName.text=model.name;
+//    self.odrNum.text=model.odrnum;
+//    self.odrAddr.text=model.addr;
+//    self.deliveryNum.text=model.delNum;
+//    self.shopImg.image=[UIImage imageNamed:model.shopImg];
+}
+
+-(void)btnClick{
+    self.block();
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
