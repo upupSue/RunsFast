@@ -37,7 +37,7 @@
         
         self.time=[[UILabel alloc]init];
         self.time.font=[UIFont systemFontOfSize:12];
-        self.time.textColor=FONTCOLOR;
+        self.time.textColor=TintColor;
         [bgView addSubview:self.time];
         [self.time mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.mas_equalTo(self.shopName.mas_centerY);
@@ -55,7 +55,7 @@
         UILabel *num=[[UILabel alloc]init];
         num.font=[UIFont systemFontOfSize:16];
         num.text=@"数量";
-        num.textColor=FONTCOLOR;
+        num.textColor=SECOND_FONTCOLOR;
         [bgView addSubview:num];
         [num mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.shopImg.mas_top).offset(5);
@@ -65,7 +65,7 @@
         UILabel *addr=[[UILabel alloc]init];
         addr.font=[UIFont systemFontOfSize:16];
         addr.text=@"配送地点";
-        addr.textColor=FONTCOLOR;
+        addr.textColor=SECOND_FONTCOLOR;
         [bgView addSubview:addr];
         [addr mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(num.mas_bottom).offset(12);
@@ -74,7 +74,7 @@
         
         self.odrAddr=[[UILabel alloc]init];
         self.odrAddr.font=[UIFont systemFontOfSize:16];
-        self.odrAddr.textColor=FONTCOLOR;
+        self.odrAddr.textColor=SECOND_FONTCOLOR;
         [bgView addSubview:self.odrAddr];
         [self.odrAddr mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(addr.mas_top);
@@ -83,7 +83,7 @@
         
         self.odrNum=[[UILabel alloc]init];
         self.odrNum.font=[UIFont systemFontOfSize:16];
-        self.odrNum.textColor=FONTCOLOR;
+        self.odrNum.textColor=SECOND_FONTCOLOR;
         [bgView addSubview:self.odrNum];
         [self.odrNum mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(num.mas_top);

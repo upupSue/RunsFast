@@ -45,6 +45,7 @@
 		C5C281721EB2D898006B77E7 /* DGThumbUpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C281701EB2D898006B77E7 /* DGThumbUpButton.m */; };
 		C5C2817C1EB32185006B77E7 /* JTSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C2817A1EB32185006B77E7 /* JTSegmentControl.swift */; };
 		C5C2817D1EB32185006B77E7 /* JTSegmentPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C2817B1EB32185006B77E7 /* JTSegmentPattern.swift */; };
+		C5C38A021EC7433E0051B8E3 /* ViewWithCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C38A011EC7433E0051B8E3 /* ViewWithCurve.m */; };
 		EC6F63309C7EDB821857F612 /* Pods_RunFast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEED866A11A5463CCF630AE /* Pods_RunFast.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +145,8 @@
 		C5C281731EB2E974006B77E7 /* RunFast-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunFast-Bridging-Header.h"; sourceTree = "<group>"; };
 		C5C2817A1EB32185006B77E7 /* JTSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTSegmentControl.swift; sourceTree = "<group>"; };
 		C5C2817B1EB32185006B77E7 /* JTSegmentPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTSegmentPattern.swift; sourceTree = "<group>"; };
+		C5C38A001EC7433E0051B8E3 /* ViewWithCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewWithCurve.h; sourceTree = "<group>"; };
+		C5C38A011EC7433E0051B8E3 /* ViewWithCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewWithCurve.m; sourceTree = "<group>"; };
 		FE545343A055E146F773574A /* Pods-RunFast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunFast.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunFast/Pods-RunFast.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -464,6 +467,8 @@
 				C5C281621EB1FFC4006B77E7 /* OrderViewController.m */,
 				C54D224A1EBC8DC40067B281 /* OrderTableViewCell.h */,
 				C54D224B1EBC8DC40067B281 /* OrderTableViewCell.m */,
+				C5C38A001EC7433E0051B8E3 /* ViewWithCurve.h */,
+				C5C38A011EC7433E0051B8E3 /* ViewWithCurve.m */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -711,6 +716,7 @@
 				C5C281631EB1FFC4006B77E7 /* OrderViewController.m in Sources */,
 				C5C2815D1EB1FFAC006B77E7 /* PesonalViewController.m in Sources */,
 				C5C2817C1EB32185006B77E7 /* JTSegmentControl.swift in Sources */,
+				C5C38A021EC7433E0051B8E3 /* ViewWithCurve.m in Sources */,
 				C5C280FD1EAB7F03006B77E7 /* UIImage+ImageWithColor.m in Sources */,
 				C5C2816A1EB25069006B77E7 /* OrderModel.m in Sources */,
 				C5C281601EB1FFB8006B77E7 /* MessageViewController.m in Sources */,

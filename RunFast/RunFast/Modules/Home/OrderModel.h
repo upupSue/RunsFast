@@ -23,6 +23,10 @@
  */
 @property (nonatomic, copy) NSString *addr;
 /**
+ * 订单时间
+ */
+@property (nonatomic, copy) NSString *time;
+/**
  * 配送编号
  */
 @property (nonatomic, copy) NSString *delNum;

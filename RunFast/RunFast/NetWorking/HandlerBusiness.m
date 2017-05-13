@@ -12,7 +12,7 @@
 
 static HandlerBusiness *_sharedManager = nil;
 static dispatch_once_t onceToken;
-NSString *const ApiCodeGetFolderColor = @"getFolderColor";
+NSString *const ApiUserLogin = @"apiUserLogin";
 
 @implementation HandlerBusiness
 
@@ -25,9 +25,9 @@ NSString *const ApiCodeGetFolderColor = @"getFolderColor";
     if (parameters==nil) {
         parameters = @{};
     }
-    [_sharedManager POST:apicode parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+    [_sharedManager POST:apicode parameters:parameters progress:nil success:^(NSURLSessionDataTask *_Nonnull task, id _Nullable responseObject) {
         if(complete != nil){
-            complete();
+            complete(); 
         }
         NSString *modelStr = [HandlerBusiness mapModel][apicode];
         if (modelStr!=nil && ![modelStr isEqualToString:@""]) {

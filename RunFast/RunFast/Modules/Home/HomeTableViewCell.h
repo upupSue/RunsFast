@@ -16,6 +16,7 @@
 @property(nonatomic,strong)UILabel *spName;
 @property(nonatomic,strong)UILabel *ordnum;
 @property(nonatomic,strong)UILabel *addr;
+@property(nonatomic,strong)UILabel *time;
 @property(nonatomic,strong)DGThumbUpButton *getbtn;
 -(void)config:(OrderModel *)model;
 

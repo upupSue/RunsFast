@@ -22,6 +22,7 @@
 
 #define BG_COLOR Rgb2UIColor(240 , 242, 243, 1) //背景色
 #define FONTCOLOR Rgb2UIColor(60 , 60, 60, 1) //主要字体色
+#define SECOND_FONTCOLOR Rgb2UIColor(100 , 100, 100, 1) //主要字体色
 #define TintColor Rgb2UIColor(154 , 169, 177, 1) //TintColor
 
 #define LINE_COLOR Rgb2UIColor(225 , 225, 225, 1) //线条色

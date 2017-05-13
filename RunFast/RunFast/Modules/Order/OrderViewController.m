@@ -11,6 +11,7 @@
 #import "RunFast-swift.h"
 #import "OrderTableViewCell.h"
 #import "SVPullToRefresh.h"
+#import "ViewWithCurve.h"
 
 @interface OrderViewController () <JTSegmentControlDelegate,UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *dataArr;
@@ -57,12 +58,12 @@
         //风火轮的动画还需要我们手动的停止
 
     }];
-    UIView *tView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 10)];
-    tView.backgroundColor=[UIColor blackColor];
-    UIView *aView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 10)];
-    aView.backgroundColor=[UIColor redColor];
-    UIView *bView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 10)];
-    bView.backgroundColor=[UIColor blueColor];
+    ViewWithCurve *tView=[[ViewWithCurve alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40) Type:1 color:[UIColor redColor]];
+    tView.backgroundColor=[UIColor clearColor];
+    ViewWithCurve *aView=[[ViewWithCurve alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40) Type:2 color:[UIColor colorWithRed: 0.186 green: 0.643 blue: 0.667 alpha: 1]];
+    aView.backgroundColor=[UIColor clearColor];
+    ViewWithCurve *bView=[[ViewWithCurve alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40) Type:3 color:[UIColor colorWithRed: 0.771 green: 0.842 blue: 0.477 alpha: 1]];
+    bView.backgroundColor=[UIColor clearColor];
 //    [_tableview.pullToRefreshView setTitle:@"下拉以刷新" forState:SVPullToRefreshStateTriggered];
 //    [_tableview.pullToRefreshView setTitle:@"刷新完了呀" forState:SVPullToRefreshStateStopped];
 //    [_tableview.pullToRefreshView setTitle:@"不要命的加载中..." forState:SVPullToRefreshStateLoading];
