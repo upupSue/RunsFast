@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 
 
+typedef NS_ENUM(NSInteger, orderState) {
+    notHandOver = 1,
+    notServed = 2,
+    hasBeenServed=3,
+    confirmedServed=4,
+};
+
 @interface OrderViewController : UIViewController
+
+@property (nonatomic,assign)orderState orderState;
 
 @end

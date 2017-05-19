@@ -23,7 +23,7 @@
     [self.view addSubview:blueView];
     
     WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height-60)];
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://runfast.ngrok.cc/userpage"]]];
     [self.view addSubview:webView];
     webView.navigationDelegate=self;
 }

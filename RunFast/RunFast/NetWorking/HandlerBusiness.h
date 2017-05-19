@@ -6,9 +6,13 @@
 //  Copyright © 2017年 方琼蔚. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import  "AFNetworking.h"
 
-extern NSString *const ApiCodeGetFolderColor;
+extern NSString *const ApiLogin;
+extern NSString *const ApiRegister;
+extern NSString *const ApiGetNotPickUpOrder;
+extern NSString *const ApiGetPickedUpOrder;
+extern NSString *const ApiUpdatePassword;
 
 @interface HandlerBusiness : AFHTTPSessionManager
 

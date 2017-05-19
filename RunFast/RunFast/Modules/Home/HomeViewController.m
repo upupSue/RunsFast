@@ -8,9 +8,11 @@
 
 #import "HomeViewController.h"
 #import "HomeTableViewCell.h"
-
+#import "OrderModel.h"
 @interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *dataArr;
+    OrderModel *orderModel;
+
 }
 
 @property(nonatomic,strong)UITableView *tableview;
@@ -27,10 +29,28 @@
     dataArr=[[NSMutableArray alloc]init];
     dataArr=[@[@1,@2,@3,@4,@5,@6,@7,@8,@9,@10] mutableCopy];
     [self loadUI];
+    [self loadData];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
+
+-(void)loadData{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [HandlerBusiness ServiceWithApicode:ApiGetNotPickUpOrder Parameters:nil Success:^(id data, id msg){
+        DBG(@"Success");
+        orderModel = (OrderModel *)data;
+        [_tableview reloadData];
+
+    }Failed:^(NSInteger code ,id errorMsg){
+        DBG(@"failed");
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:errorMsg preferredStyle:UIAlertControllerStyleAlert];
+        [alertVC setDismissInterval:kTimeSpan];
+        [self presentViewController:alertVC animated:YES completion:nil];
+    }Complete:^{
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    }];
 }
 
 -(void)loadUI{
@@ -57,6 +77,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellID=@"cellID";
     HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    [cell config:orderModel.orderList[indexPath.row]];
     if(nil==cell){
         cell=[[HomeTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
@@ -68,6 +89,7 @@
         [_tableview endUpdates];
         [_tableview reloadData];
     };
+    
     return cell;
 }
 

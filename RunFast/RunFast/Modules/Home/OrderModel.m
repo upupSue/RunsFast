@@ -10,6 +10,13 @@
 
 @implementation OrderModel
 
++ (NSDictionary *)modelContainerPropertyGenericClass{
+    return @{@"addressList" : [orderInfo class]};
+}
+@end
+
+@implementation orderInfo
+
 - (id)copyWithZone:(NSZone *)zone { return [self yy_modelCopy]; }
 
 @end

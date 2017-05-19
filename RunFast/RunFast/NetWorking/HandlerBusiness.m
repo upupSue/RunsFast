@@ -8,12 +8,15 @@
 
 #import "HandlerBusiness.h"
 #import "YYModel.h"
-#define BaseURLString  @"http://localhost:3000/"
+#define BaseURLString  @"http://runfast.ngrok.cc/"
 
 static HandlerBusiness *_sharedManager = nil;
 static dispatch_once_t onceToken;
-NSString *const ApiUserLogin = @"apiUserLogin";
-
+NSString *const ApiLogin = @"login";
+NSString *const ApiRegister = @"register";
+NSString *const ApiGetNotPickUpOrder = @"userlist";
+NSString *const ApiGetPickedUpOrder = @"getUserList";
+NSString *const ApiUpdatePassword = @"updatePassword";
 @implementation HandlerBusiness
 
 +(void)ServiceWithApicode:(NSString*)apicode Parameters:(NSDictionary*)parameters Success:(SuccessBlock)success Failed:(FailedBlock)failed Complete:(CompleteBlock)complete{
@@ -25,33 +28,42 @@ NSString *const ApiUserLogin = @"apiUserLogin";
     if (parameters==nil) {
         parameters = @{};
     }
+
     [_sharedManager POST:apicode parameters:parameters progress:nil success:^(NSURLSessionDataTask *_Nonnull task, id _Nullable responseObject) {
         if(complete != nil){
             complete(); 
         }
-        NSString *modelStr = [HandlerBusiness mapModel][apicode];
-        if (modelStr!=nil && ![modelStr isEqualToString:@""]) {
-            Class cla = NSClassFromString(modelStr);
-            if (!cla) {
-                NSLog(@"找不到对应模型类，%@", modelStr);
+        if([responseObject[@"status"] integerValue]==100)
+        {
+            NSString *modelStr = [HandlerBusiness mapModel][apicode];
+            if (modelStr!=nil && ![modelStr isEqualToString:@""]) {
+                Class cla = NSClassFromString(modelStr);
+                if (!cla) {
+                    DBG(@"找不到对应模型类，%@", modelStr);
+                }
+                success([cla yy_modelWithJSON:responseObject[@"data"]],responseObject[@"msg"]);
             }
-            success([cla yy_modelWithJSON:responseObject[@"data"]],responseObject[@"msg"]);
+            else{
+                success(responseObject[@"data"],responseObject[@"msg"]);
+            }
         }
         else{
-            success(responseObject,responseObject);
+            failed([responseObject[@"status"] integerValue] , responseObject[@"msg"]);
         }
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    }failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
         if(complete != nil){
             complete();
         }
-        failed([@-9999 integerValue] , @{@"prompt":@"网络错误",@"error":@"网络错误或接口调用失败"});
+        failed([@-9999 integerValue] , @"网络错误");
     }];
 }
 
 +(NSDictionary *)mapModel
 {
     return @{
-             //             ApiCodeGetUserInfo:@"GetUserInfoModel",
+                          ApiGetNotPickUpOrder:@"OrderModel",
+                          ApiGetPickedUpOrder:@"OrderModel",
              };
 }
 

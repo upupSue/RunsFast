@@ -86,7 +86,6 @@
          }];
          
          _getbtn=[[DGThumbUpButton alloc]init];
-         //         [btn setBackgroundImage:[UIImage imageNamed:@"icon_qiang"] forState:UIControlStateNormal];
          [self addSubview:_getbtn];
          [_getbtn mas_makeConstraints:^(MASConstraintMaker *make) {
              make.centerY.equalTo(self.mas_centerY).offset(8);
@@ -103,19 +102,21 @@
              make.centerX.equalTo(_time.mas_centerX).offset(6);
          }];
          
-         _addr.text=@"山南一幢";
-         _ordnum.text=@"10";
-         _spName.text=@"厨禾";
-         _time.text=@"2017/04/12 13:12";
+//         _addr.text=@"山南一幢";
+//         _ordnum.text=@"10";
+//         _spName.text=@"厨禾";
+//         _time.text=@"2017/04/12 13:12";
 
      }
      return self;
 }
 
--(void)config:(OrderModel *)model{
-//    self.spName.text=model.name;
-//    self.ordnum.text=model.odrnum;
-//    self.addr.text=model.addr;
+-(void)config:(orderInfo *)model{
+    self.spName.text=model.sellername;
+    self.ordnum.text=model.listnum;
+    self.addr.text=model.placename;
+    self.time.text=model.listtime;
+    [self layoutIfNeeded];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

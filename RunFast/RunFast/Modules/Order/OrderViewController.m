@@ -12,10 +12,11 @@
 #import "OrderTableViewCell.h"
 #import "SVPullToRefresh.h"
 #import "ViewWithCurve.h"
-
+#import "OrderModel.h"
 @interface OrderViewController () <JTSegmentControlDelegate,UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *dataArr;
     JTSegmentControl *segmentedControl;
+    OrderModel *orderModel;
 }
 @property(nonatomic,strong)UITableView *tableview;
 @end
@@ -83,10 +84,40 @@
 }
 
 -(void)loadData{
-//success
-    [_tableview.pullToRefreshView stopAnimating];
-//failed
-//    [_tableview.pullToRefreshView stopAnimating];
+    NSMutableDictionary *parameter = [[NSMutableDictionary alloc]init];
+//    [parameter setObject:[UserDefaultsUtils valueWithKey:@"userId"] forKey:@"userid"];
+    switch (_orderState) {
+        case 1:
+            [parameter setObject:@1 forKey:@"liststate"];
+            break;
+        case 2:
+            [parameter setObject:@2 forKey:@"liststate"];
+            break;
+        case 3:
+            [parameter setObject:@3 forKey:@"liststate"];
+            break;
+        case 4:
+            [parameter setObject:@4 forKey:@"liststate"];
+            break;
+            
+        default:
+            break;
+    }
+    [HandlerBusiness ServiceWithApicode:ApiGetPickedUpOrder Parameters:parameter Success:^(id data, id msg){
+        DBG(@"Success");
+        [_tableview.pullToRefreshView stopAnimating];
+        orderModel = (OrderModel *)data;
+        [_tableview reloadData];
+        
+    }Failed:^(NSInteger code ,id errorMsg){
+        DBG(@"failed");
+        UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:errorMsg preferredStyle:UIAlertControllerStyleAlert];
+        [alertVC setDismissInterval:kTimeSpan];
+        [self presentViewController:alertVC animated:YES completion:nil];
+    }Complete:^{
+        [_tableview.pullToRefreshView stopAnimating];
+    }];
+
 }
 
 -(void)refreshTableView{

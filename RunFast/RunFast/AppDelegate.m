@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "LoginViewController.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
-
+#import "MainTabBarViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,11 +18,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    LoginViewController *vc =[[LoginViewController alloc]init];
+
 
     self.window=[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor=BG_COLOR;
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
+    if([UserDefaultsUtils valueWithKey:@"userId"]){
+        MainTabBarViewController *tabBarVc = [[MainTabBarViewController alloc] init];
+        self.window.rootViewController=tabBarVc;
+    }
+    else{
+        LoginViewController *vc =[[LoginViewController alloc]init];
+        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
+    }
     [self.window makeKeyAndVisible];
 
     /* -------- 全局UI设置 -------- */
@@ -33,6 +40,7 @@
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc]init] ];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:20],NSFontAttributeName,nil]];
+ 
     
     //设置自定义返回按钮图片
     [self setNaviBack];

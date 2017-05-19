@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+
+typedef NS_ENUM(NSInteger, account) {
+    signup= 1,
+    resetPsd = 2,
+};
+
 @interface RegisterViewController : UIViewController
+
+@property (nonatomic,assign)account accountType;
 
 @end

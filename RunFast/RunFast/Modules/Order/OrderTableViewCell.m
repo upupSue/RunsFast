@@ -155,12 +155,13 @@
     return self;
 }
 
--(void)config:(OrderModel *)model{
-//    self.shopName.text=model.name;
-//    self.odrNum.text=model.odrnum;
-//    self.odrAddr.text=model.addr;
-//    self.deliveryNum.text=model.delNum;
-//    self.shopImg.image=[UIImage imageNamed:model.shopImg];
+-(void)config:(orderInfo *)model{
+    self.shopName.text=model.sellername;
+    self.odrNum.text=model.listnum;
+    self.odrAddr.text=model.placename;
+    self.time.text=model.placename;
+    self.deliveryNum.text=model.listtime;
+    self.shopImg.image=[UIImage imageNamed:model.userimgurl];
 }
 
 -(void)btnClick{

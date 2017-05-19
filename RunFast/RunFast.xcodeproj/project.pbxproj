@@ -46,6 +46,8 @@
 		C5C2817C1EB32185006B77E7 /* JTSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C2817A1EB32185006B77E7 /* JTSegmentControl.swift */; };
 		C5C2817D1EB32185006B77E7 /* JTSegmentPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C2817B1EB32185006B77E7 /* JTSegmentPattern.swift */; };
 		C5C38A021EC7433E0051B8E3 /* ViewWithCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C38A011EC7433E0051B8E3 /* ViewWithCurve.m */; };
+		C5C38A051EC94A030051B8E3 /* UIAlertController+AutoHide.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C38A041EC94A030051B8E3 /* UIAlertController+AutoHide.m */; };
+		C5C38A081EC94ACF0051B8E3 /* NSString+Security.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C38A071EC94ACF0051B8E3 /* NSString+Security.m */; };
 		EC6F63309C7EDB821857F612 /* Pods_RunFast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEED866A11A5463CCF630AE /* Pods_RunFast.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +149,10 @@
 		C5C2817B1EB32185006B77E7 /* JTSegmentPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTSegmentPattern.swift; sourceTree = "<group>"; };
 		C5C38A001EC7433E0051B8E3 /* ViewWithCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewWithCurve.h; sourceTree = "<group>"; };
 		C5C38A011EC7433E0051B8E3 /* ViewWithCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewWithCurve.m; sourceTree = "<group>"; };
+		C5C38A031EC94A030051B8E3 /* UIAlertController+AutoHide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+AutoHide.h"; sourceTree = "<group>"; };
+		C5C38A041EC94A030051B8E3 /* UIAlertController+AutoHide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+AutoHide.m"; sourceTree = "<group>"; };
+		C5C38A061EC94ACF0051B8E3 /* NSString+Security.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Security.h"; sourceTree = "<group>"; };
+		C5C38A071EC94ACF0051B8E3 /* NSString+Security.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Security.m"; sourceTree = "<group>"; };
 		FE545343A055E146F773574A /* Pods-RunFast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunFast.release.xcconfig"; path = "Pods/Target Support Files/Pods-RunFast/Pods-RunFast.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -301,6 +307,10 @@
 		C5C280ED1EAB7628006B77E7 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C5C38A061EC94ACF0051B8E3 /* NSString+Security.h */,
+				C5C38A071EC94ACF0051B8E3 /* NSString+Security.m */,
+				C5C38A031EC94A030051B8E3 /* UIAlertController+AutoHide.h */,
+				C5C38A041EC94A030051B8E3 /* UIAlertController+AutoHide.m */,
 				C5C280FB1EAB7F03006B77E7 /* UIImage+ImageWithColor.h */,
 				C5C280FC1EAB7F03006B77E7 /* UIImage+ImageWithColor.m */,
 				C5C280FF1EAB800D006B77E7 /* UIImage+Scale.h */,
@@ -722,8 +732,10 @@
 				C5C281601EB1FFB8006B77E7 /* MessageViewController.m in Sources */,
 				C5C2810A1EAB88DE006B77E7 /* UIView+Circle.m in Sources */,
 				C5C2811A1EAB8BB9006B77E7 /* HomeViewController.m in Sources */,
+				C5C38A051EC94A030051B8E3 /* UIAlertController+AutoHide.m in Sources */,
 				C5C2817D1EB32185006B77E7 /* JTSegmentPattern.swift in Sources */,
 				C5C280F61EAB791F006B77E7 /* BaseViewController.m in Sources */,
+				C5C38A081EC94ACF0051B8E3 /* NSString+Security.m in Sources */,
 				C5C281241EAFAA91006B77E7 /* LoginViewController.m in Sources */,
 				C54D224C1EBC8DC40067B281 /* OrderTableViewCell.m in Sources */,
 				C5C281521EB185D5006B77E7 /* SpeechSynthesizer.m in Sources */,
@@ -868,6 +880,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
